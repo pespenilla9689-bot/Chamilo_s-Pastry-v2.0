@@ -1,0 +1,340 @@
+/* menu.css - menu & carousel */
+
+/* Intro text under page title */
+.menu-intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  color: #735e75;
+}
+
+/* ========= Carousel ========= */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(178, 130, 255, 0.75),
+    rgba(255, 242, 169, 0.85)
+  );
+  box-shadow: var(--shadow-soft);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 2.2rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.carousel-cake-info h3 {
+  font-family: var(--font-cursive);
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.carousel-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.carousel-description {
+  font-size: 0.95rem;
+  color: #6f5a72;
+  margin-bottom: 0.7rem;
+}
+
+.carousel-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 0.86rem;
+}
+
+.carousel-price {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.carousel-image {
+  position: relative;
+}
+
+.carousel-cake-blob {
+  width: 330px;
+  height: 330px;
+  border-radius: 999px;
+  margin: 0 auto;
+  background: conic-gradient(
+    from 230deg,
+    #ffeef8,
+    #fff6c2,
+    #e6d7ff,
+    #ffeef8
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-cake-inner {
+  width: 76%;
+  height: 76%;
+  border-radius: inherit;
+  background: radial-gradient(circle at 30% 10%, #fffdf8, #f7bddb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+}
+
+/* wrapper that holds arrows + dots */
+.carousel-dots-wrapper {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* just the line of dots */
+.carousel-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform var(--transition-base),
+    background var(--transition-base);
+}
+
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+.carousel-mini-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6f4d8c;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.carousel-mini-arrow:hover {
+  background: var(--accent-pink);
+  transform: scale(1.12);
+}
+
+/* spinning cake image */
+.carousel-cake-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: spinCake 18s linear infinite;
+}
+
+/* same animation used on your homepage */
+@keyframes spinCake {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========= Grid of cakes ========= */
+
+.menu-section {
+  margin-top: 3rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.7rem;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: 1.4rem 1.2rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+  height: 100%;              /* NEW: ensure cards stretch to same height */
+}
+
+.menu-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.menu-card-name {
+  font-weight: 600;
+}
+
+.menu-card-tag {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(230, 215, 255, 0.4);
+}
+
+.menu-card-desc {
+  font-size: 0.85rem;
+  color: #7a6675;
+}
+
+/* bottom row: price + button */
+.menu-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;          /* NEW: pushes this row to the bottom */
+}
+
+.menu-card-price {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.menu-card-size {
+  font-size: 0.8rem;
+  color: #7c6678;
+}
+
+/* menu card images */
+.menu-card-img-wrapper {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+  background: #fff9ff; /* soft pastel fallback behind transparent PNGs */
+}
+
+.menu-card-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 275px; /* image height */
+}
+
+.menu-add-btn {
+  font-size: 0.85rem;
+  padding-inline: 1.1rem;
+}
+
+/* ========= Customized Order CTA ========= */
+
+.custom-order-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 3rem 2rem 3.2rem;
+  border-radius: 24px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 210, 255, 0.95),
+    rgba(255, 244, 189, 0.98)
+  );
+  box-shadow: var(--shadow-soft);
+}
+
+.custom-order-title {
+  font-family: var(--font-cursive);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #6a3a7f;
+  margin-bottom: 0.8rem;
+}
+
+.custom-order-line {
+  font-size: 1.05rem;
+  color: #745a7a;
+}
+
+.custom-order-line.secondary {
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.custom-order-btn {
+  padding-inline: 1.8rem;
+  font-size: 1rem;
+}
+
+/* Extra top space between nav and contact hero */
+body[data-page="menu"] main > .section:first-of-type {
+  padding-top: 7rem;   /* increase this value if you want even more space */
+}
+
+
+/* ========= Responsive ========= */
+
+@media (max-width: 900px) {
+  .carousel-item {
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: 1.4rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .carousel {
+    border-radius: 18px;
+  }
+
+  .custom-order-section {
+    padding: 2.4rem 1.6rem 2.6rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .custom-order-title {
+    font-size: 2.3rem;
+  }
+}

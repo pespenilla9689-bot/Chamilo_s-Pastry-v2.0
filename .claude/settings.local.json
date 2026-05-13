@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\xampp\\\\mysql\\\\bin\\\\mysql.exe\" -u root -e \"ALTER TABLE feedbacks ADD COLUMN IF NOT EXISTS is_featured TINYINT\\(1\\) NOT NULL DEFAULT 0;\" chamilos_pastry)"
+    ]
+  }
+}

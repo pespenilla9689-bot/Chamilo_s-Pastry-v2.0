@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chamilo's Pastry</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body data-page="index">
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div id="pageLoader" class="page-loader">
+    <!-- Center content -->
+    <div class="loader-content">
+      <div class="loader-logo-ring">
+        <img src="/assets/logo.png" class="loader-logo-img" alt="Chamilo's Pastry" />
+      </div>
+      <h1 class="loader-brand-title">Chamilo's Pastry</h1>
+      <p class="loader-tagline">Handcrafted with love</p>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBarFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BACKGROUND DECOR ===================== -->
+  <div class="page-bg-decor" aria-hidden="true">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+    <div class="bg-blob bg-blob-4"></div>
+    <div class="bg-sprinkle bg-s1">✦</div>
+    <div class="bg-sprinkle bg-s2">✦</div>
+    <div class="bg-sprinkle bg-s3">✦</div>
+    <div class="bg-sprinkle bg-s4">✧</div>
+    <div class="bg-sprinkle bg-s5">✦</div>
+    <div class="bg-dots-grid"></div>
+  </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="/html/index.html" class="brand">
+          <div class="brand-logo">
+            <img src="/assets/logo.png" alt="Chamilo's Pastry Logo" />
+          </div>
+          <span class="brand-name">Chamilo's Pastry</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/menu.html">Menu</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-cart" type="button">
+            <span class="nav-cart-icon"></span>
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+          <a href="/html/login.html" class="btn btn-ghost">Log in</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =================== HERO (100vh) =================== -->
+      <section class="section section--hero">
+        <div class="container hero">
+          <div class="hero-copy fade-in-up">
+            <div class="pill">Cakes for milestones &amp; mini wins</div>
+            <h1 class="hero-tagline">Celebrate every sweet layer</h1>
+            <h2 class="hero-title">
+              Custom cakes with a <span>soft pastel</span> twist.
+            </h2>
+            <p class="hero-text">
+              From intimate birthdays to big debuts, we design cakes that match
+              your story, your colors, and your flavor favorites.
+            </p>
+            <div class="hero-actions">
+              <a href="/html/menu.html" class="btn btn-primary">Browse menu</a>
+              <a href="/html/contact.html" class="btn btn-outline">Custom order</a>
+            </div>
+            <p class="hero-note">
+              Lead time: 3–7 days · Rush slots subject to availability
+            </p>
+          </div>
+
+          <div class="hero-visual fade-in-up fade-in-delay-2">
+            <!-- Decorative rings -->
+            <div class="hero-ring hero-ring-1"></div>
+            <div class="hero-ring hero-ring-2"></div>
+            <!-- Floating decorative elements -->
+            <div class="hero-deco hero-deco-1">⟡</div>
+            <div class="hero-deco hero-deco-2">⟡</div>
+            <div class="hero-deco hero-deco-3">⟡</div>
+            <div class="hero-deco hero-deco-4">⟡</div>
+            <!-- Main cake — now with a warm circular plate like image 1 -->
+            <div class="hero-main-cake">
+              <div class="hero-cake-glow"></div>
+              <img src="/assets/index-hero.png" alt="Cake" class="hero-cake-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <div class="scroll-cue-dot"></div>
+          <div class="scroll-cue-line"></div>
+        </div>
+      </section>
+
+      <!-- =================== HIGHLIGHTS =================== -->
+      <section class="section section--soft-bg">
+        <div class="container">
+          <h2 class="section-title scroll-reveal">Why clients choose us</h2>
+          <p class="section-subtitle scroll-reveal" data-delay="0.1">
+            You bring the occasion, we'll handle the cake from flavor
+            suggestions to design ideas.
+          </p>
+
+          <div class="highlights-grid">
+            <article class="highlight-card scroll-reveal" data-delay="0">
+              <div class="highlight-icon">🧁</div>
+              <div>
+                <div class="highlight-title">Balanced sweetness</div>
+                <div class="highlight-text">
+                  Recipes designed for Filipino taste light, moist, and not too
+                  sweet.
+                </div>
+              </div>
+            </article>
+
+            <article class="highlight-card scroll-reveal" data-delay="0.12">
+              <div class="highlight-icon">🎨</div>
+              <div>
+                <div class="highlight-title">Custom designs</div>
+                <div class="highlight-text">
+                  Share your peg or theme and we'll translate it into a clean,
+                  modern cake.
+                </div>
+              </div>
+            </article>
+
+            <article class="highlight-card scroll-reveal" data-delay="0.24">
+              <div class="highlight-icon">⏰</div>
+              <div>
+                <div class="highlight-title">On-time pickups</div>
+                <div class="highlight-text">
+                  Timely, well-packed orders ready for your celebration
+                  schedule.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== FEATURED CAKES =================== -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title scroll-reveal">Client favorites</h2>
+          <p class="section-subtitle scroll-reveal" data-delay="0.1">
+            A peek at our most ordered flavors. You can start with these then
+            tweak the design for your event.
+          </p>
+
+          <div class="featured-grid">
+            <!-- CARD 1 -->
+            <article class="featured-card scroll-reveal" data-delay="0">
+              <div class="featured-img-wrap">
+                <img src="/assets/index-featured1.png"
+                     alt="Lavender Flutter Bloom Cake"
+                     class="featured-img">
+                <div class="featured-full-preview" aria-hidden="true">
+                  <img src="/assets/index-featured1.png" alt="" class="featured-full-img">
+                </div>
+                <div class="featured-tag">Parenthood</div>
+              </div>
+              <div class="featured-info">
+                <div class="featured-name">Lavender Flutter Bloom Cake</div>
+                <div class="featured-price">From ₱1,500</div>
+                <button
+                  class="btn btn-ghost featured-atc"
+                  data-add-to-cart
+                  data-id="featured-1"
+                  data-name="Lavender Flutter Bloom Cake"
+                  data-price="1500"
+                  data-image="/assets/index-featured1.png">
+                  Add to cart
+                </button>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="featured-card scroll-reveal" data-delay="0.12">
+              <div class="featured-img-wrap">
+                <img src="/assets/index-featured2.png"
+                     alt="Crimson Ribbon Delight Cake"
+                     class="featured-img">
+                <div class="featured-full-preview" aria-hidden="true">
+                  <img src="/assets/index-featured2.png" alt="" class="featured-full-img">
+                </div>
+                <div class="featured-tag">Weddings</div>
+              </div>
+              <div class="featured-info">
+                <div class="featured-name">Crimson Ribbon Delight Cake</div>
+                <div class="featured-price">From ₱1,800</div>
+                <button
+                  class="btn btn-ghost featured-atc"
+                  data-add-to-cart
+                  data-id="featured-2"
+                  data-name="Crimson Ribbon Delight Cake"
+                  data-price="1800"
+                  data-image="/assets/index-featured2.png">
+                  Add to cart
+                </button>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="featured-card scroll-reveal" data-delay="0.24">
+              <div class="featured-img-wrap">
+                <img src="/assets/index-featured3.png"
+                     alt="Midnight Teddy Celebration Cake"
+                     class="featured-img">
+                <div class="featured-full-preview" aria-hidden="true">
+                  <img src="/assets/index-featured3.png" alt="" class="featured-full-img">
+                </div>
+                <div class="featured-tag">Birthdays</div>
+              </div>
+              <div class="featured-info">
+                <div class="featured-name">Midnight Teddy Celebration Cake</div>
+                <div class="featured-price">From ₱1,450</div>
+                <button
+                  class="btn btn-ghost featured-atc"
+                  data-add-to-cart
+                  data-id="featured-3"
+                  data-name="Midnight Teddy Celebration Cake"
+                  data-price="1450"
+                  data-image="/assets/index-featured3.png">
+                  Add to cart
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== TESTIMONIALS =================== -->
+      <section class="section section-testimonials">
+        <div class="container">
+          <h2 class="section-title scroll-reveal">What our clients say</h2>
+          <p class="section-subtitle scroll-reveal" data-delay="0.1">
+            A few sweet words from celebrations we've been part of.
+          </p>
+          <div class="testimonials-grid" id="featuredReviewsGrid">
+            <!-- Populated dynamically from featured feedbacks -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Chamilo's Pastry</h3>
+         <p>
+          Custom, handcrafted cakes with a focus on clean designs, balanced sweetness, 
+          and memorable flavors.
+         </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=100089264954559" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
+          <img src="/assets/fb.png" alt="Facebook icon" />
+        </a>
+        <a href="https://www.instagram.com/chamilos_pastrys/" target="_blank" rel="noopener" aria-label="Visit our Instagram page">
+          <img src="/assets/insta.png" alt="Instagram icon" />
+        </a>
+        <a href="mailto:Chamilopastry@gmail.com" aria-label="Email us">
+          <img src="/assets/email.png" alt="Email icon" />
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-column-title">Contact Us</div>
+      <ul class="footer-links">
+        <li>Diamond St., Brgy. Pembo, Makati City</li>
+        <li>+63 916 490 1535</li>
+        <li>chamilopastry@gmail.com</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-column-title">Quick links</div>
+      <ul class="footer-links">
+        <li><a href="/html/menu.html">Order a cake</a></li>
+        <li><a href="/html/contact.html">Terms and Services</a></li>
+        <li><a href="/html/login.html">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Chamilo's Pastry. All rights reserved.
+  </div>
+</footer>
+
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/chatbot.css" />
+    <script src="/js/chatbot.js"></script>
+  </body>
+</html>

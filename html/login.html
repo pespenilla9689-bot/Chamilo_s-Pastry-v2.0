@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chamilo's Pastry</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body class="page-enter" data-page="login">
+
+ <!-- ===================== PAGE LOADER ===================== -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-logo-ring"><img src="../assets/logo.png" class="loader-logo-img" alt="Chamilo's Pastry" /></div>
+      <h1 class="loader-brand-title">Chamilo's Pastry</h1>
+      <p class="loader-tagline">Handcrafted with love</p>
+      <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Back to website -->
+  <a href="../html/index.html" class="login-back-link">← Back to website</a>
+
+  <!-- LOGIN -->
+  <main class="login-page-wrapper">
+    <div class="login-split-card" id="loginSplitCard">
+
+      <!-- LEFT PANEL -->
+      <div class="login-panel-form">
+        <div class="login-heading">
+          <h2 id="formHeading">Sign In</h2>
+          <p id="formSubHeading">Welcome! Please login</p>
+        </div>
+
+        <form id="authForm" class="login-form-inner">
+          <input type="hidden" id="authMode" value="login" />
+
+          <!-- FULL NAME (SIGN UP ONLY) -->
+          <input type="text" id="authName" placeholder="Full Name" class="hidden" />
+
+          <!-- EMAIL + PASSWORD -->
+          <input type="email" id="authEmail" placeholder="Email" required />
+          <input type="password" id="authPassword" placeholder="Password" required />
+
+          <!-- FORGOT -->
+          <a class="login-forgot">Forgot password?</a>
+
+          <!-- TERMS (SIGN UP ONLY) -->
+          <div class="terms-row hidden" id="termsRow">
+            <input type="checkbox" id="termsCheck" />
+            <label for="termsCheck">
+              I agree to the <a href="#">Terms & Conditions</a>
+            </label>
+          </div>
+
+          <!-- SUBMIT -->
+          <button class="login-submit-btn" type="submit" id="authSubmitBtn">
+            SIGN IN
+          </button>
+
+          <!-- SOCIAL LOGIN -->
+          <div class="social-divider">
+            <span>or continue with</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="social-btn google">
+              <img src="../assets/google.png" alt="Google" />
+              Google
+            </button>
+
+            <button type="button" class="social-btn facebook">
+              <img src="../assets/facebook.png" alt="Facebook" />
+              Facebook
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="login-panel-color">
+        <!-- Animated floating circles -->
+        <span class="login-circle login-circle-1"></span>
+        <span class="login-circle login-circle-2"></span>
+        <span class="login-circle login-circle-3"></span>
+        <span class="login-circle login-circle-4"></span>
+        <span class="login-circle login-circle-5"></span>
+        <span class="login-circle login-circle-6"></span>
+
+        <div class="login-mascot">
+          <img src="../assets/mascot.jpg" alt="Bakery Girl" />
+        </div>
+
+        <h2 id="colorPanelHeading">Hello, Friend!</h2>
+
+        <p id="colorPanelText">
+          Don't have an account?<br />
+          Sign up and start your sweet journey
+        </p>
+
+        <button class="btn-panel" id="switchPanelBtn">
+          SIGN UP
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Chamilo's Pastry</h3>
+        <p>
+          Custom, handcrafted cakes with a focus on clean designs,
+          balanced sweetness, and memorable flavors.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=100089264954559" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
+            <img src="../assets/fb.png" alt="Facebook icon" />
+          </a>
+          <a href="https://www.instagram.com/chamilos_pastrys/" target="_blank" rel="noopener" aria-label="Visit our Instagram page">
+            <img src="../assets/insta.png" alt="Instagram icon" />
+          </a>
+          <a href="mailto:Chamilopastry@gmail.com" aria-label="Email us">
+            <img src="../assets/email.png" alt="Email icon" />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-column-title">Contact Us</div>
+        <ul class="footer-links">
+          <li>Diamond St., Brgy. Pembo, Makati City</li>
+          <li>+63 916 490 1535</li>
+          <li>chamilopastry@gmail.com</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-column-title">Quick links</div>
+        <ul class="footer-links">
+          <li><a href="../html/menu.html">Order a cake</a></li>
+          <li><a href="../html/contact.html">Terms and Services</a></li>
+          <li><a href="../html/login.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Chamilo's Pastry. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>

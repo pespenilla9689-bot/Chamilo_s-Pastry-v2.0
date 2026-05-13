@@ -1,0 +1,196 @@
+.section--hero {
+  padding-top: 6rem;  /* Increase or decrease as needed */
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.3rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+  padding: 2rem 1.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-card h3 {
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: #735e75;
+  margin-bottom: 1rem;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-field {
+  margin-bottom: 1rem;
+}
+
+.contact-label {
+  font-size: 0.83rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #6f5a72;
+}
+
+.contact-extra-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.file-upload-btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffefb5, #e9b4ff);
+  color: #4a2a51;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.file-upload-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.92;
+}
+
+.file-upload-btn:active {
+  transform: scale(0.97);
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-name {
+  font-size: 0.85rem;
+  color: #6f5a72;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.contact-info-card {
+  background: linear-gradient(
+    135deg,
+    rgba(230, 215, 255, 0.95),
+    rgba(255, 246, 194, 0.95)
+  );
+  border-radius: 24px;
+  padding: 1.8rem 1.8rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-info-card .pill {
+  padding: 0.35rem 0.9rem 0.35rem 0;
+}
+
+.contact-info-card h3 {
+  margin: 0.9rem 0 0;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #5b465b;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.contact-list li div {
+  text-align: left;
+}
+
+.contact-hours {
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  color: #6f5a72;
+}
+
+.contact-map {
+  margin-top: 1.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-map iframe {
+  width: calc(100%);
+  max-width: 440px;
+  height: 260px;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Extra top space between nav and contact hero */
+body[data-page="contact"] main > .section:first-of-type {
+  padding-top: 7rem;   /* increase this value if you want even more space */
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-form-row,
+  .contact-extra-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .file-upload-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-upload-name {
+    max-width: 100%;
+  }
+}

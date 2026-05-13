@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chamilo's Pastry</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+  </head>
+  <body class="page-enter" data-page="menu">
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-logo-ring"><img src="/assets/logo.png" class="loader-logo-img" alt="Chamilo's Pastry" /></div>
+      <h1 class="loader-brand-title">Chamilo's Pastry</h1>
+      <p class="loader-tagline">Handcrafted with love</p>
+      <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="/html/index.html" class="brand">
+          <div class="brand-logo">
+            <img src="/assets/logo.png" alt="Chamilo's Pastry Logo" />
+          </div>
+          <span class="brand-name">Chamilo's Pastry</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/menu.html">Menu</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-cart" type="button">
+            <span class="nav-cart-icon"></span>
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+          <a href="/html/login.html" class="btn btn-ghost">Log in</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title fade-in-up">Our signature cakes</h1>
+          <p class="menu-intro fade-in-up fade-in-delay-1">
+            Share your event details, theme, and budget, and we’ll get 
+            back to you with cake recommendations and a quote.
+          </p>
+
+          <!-- Carousel -->
+          <div class="carousel fade-in-up fade-in-delay-2" id="cakeCarousel">
+            <div class="carousel-track">
+              <!-- Slide 1 -->
+              <article class="carousel-item">
+                <div class="carousel-cake-info">
+                  <div class="carousel-tag">
+                    Bestseller · <span>Perfect for birthdays</span>
+                  </div>
+                  <h3>Lavender Butterfly Dream Cake</h3>
+                  <p class="carousel-description">
+                    Fluffy vanilla sponge layered with smooth vanilla cream,
+                    decorated with edible gold beads, pastel butterflies, and
+                    soft lavender frosting for a dreamy, elegant finish.
+                  </p>
+                  <div class="carousel-meta">
+                    <span class="carousel-price"
+                      >₱1,500 · 8–10 servings</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c1"
+                    data-name="Strawberry Milk Cloud Cake"
+                    data-price="1500"
+                    data-image="/assets/menu-signature1.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+                <div class="carousel-image">
+                  <div class="carousel-cake-blob">
+                    <div class="carousel-cake-inner">
+                      <img
+                        src="/assets/menu-signature1.png"
+                        alt="Strawberry Milk Cloud Cake"
+                        class="carousel-cake-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 -->
+              <article class="carousel-item">
+                <div class="carousel-cake-info">
+                  <div class="carousel-tag">
+                    Classic · <span>Perfect for any occasion</span>
+                  </div>
+                  <h3>Vanilla Bean Celebration Cake</h3>
+                  <p class="carousel-description">
+                    Madagascar vanilla sponge with silky vanilla-bean
+                    buttercream, finished with a minimalist piped border and a
+                    bold red ribbon-style trim.
+                  </p>
+                  <div class="carousel-meta">
+                    <span class="carousel-price"
+                      >₱1,350 · 8–10 servings</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c2"
+                    data-name="Vanilla Bean Celebration Cake"
+                    data-price="1350"
+                    data-image="/assets/menu-signature2.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+                <div class="carousel-image">
+                  <div class="carousel-cake-blob">
+                    <div class="carousel-cake-inner">
+                      <img
+                        src="/assets/menu-signature2.png"
+                        alt="Strawberry Milk Cloud Cake"
+                        class="carousel-cake-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 3 -->
+              <article class="carousel-item">
+                <div class="carousel-cake-info">
+                  <div class="carousel-tag">
+                    Cool · <span>Casual</span>
+                  </div>
+                  <h3>Ocean Breeze Celebration Cake</h3>
+                  <p class="carousel-description">
+                    Soft vanilla sponge covered in smooth buttercream, decorated
+                    with hand-crafted seashells, a bold red starfish, gentle
+                    wave textures, and sandy details for a playful seaside
+                    finish. Customized with the message “8 months” to mark a
+                    special milestone.
+                  </p>
+                  <div class="carousel-meta">
+                    <span class="carousel-price"
+                      >₱1,600 · 6–8 servings</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c3"
+                    data-name="Lavender Honey Velvet Cake"
+                    data-price="1800"
+                    data-image="/assets/menu-signature3.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+                <div class="carousel-image">
+                  <div class="carousel-cake-blob">
+                    <div class="carousel-cake-inner">
+                      <img
+                        src="/assets/menu-signature3.png"
+                        alt="Strawberry Milk Cloud Cake"
+                        class="carousel-cake-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- dots + mini arrows row -->
+            <div class="carousel-dots-wrapper">
+              <button
+                class="carousel-mini-arrow mini-prev"
+                type="button"
+                aria-label="Previous cake"
+              >
+                ‹
+              </button>
+
+              <div class="carousel-dots" id="carouselDots">
+                <button class="carousel-dot" data-index="0"></button>
+                <button class="carousel-dot" data-index="1"></button>
+                <button class="carousel-dot" data-index="2"></button>
+              </div>
+
+              <button
+                class="carousel-mini-arrow mini-next"
+                type="button"
+                aria-label="Next cake"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+          <!-- end .carousel -->
+
+          <!-- Full menu -->
+          <section class="menu-section">
+            <h2 class="section-title" style="margin-bottom: 0.4rem">
+              Explore a world of  flavors
+            </h2>
+            <p class="section-subtitle">
+              These are our most popular sizes and flavors. For fully custom
+              designs, reach out through the contact page.
+            </p>
+
+            <div class="menu-grid">
+              <!-- Card 1 -->
+              <article class="menu-card fade-in-up">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu1.png"
+                    alt="Blue Waves"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">Blue Waves</div>
+                    <div class="menu-card-tag">Rich & Indulgent</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A smooth vanilla-buttercream cake decorated with layered
+                  ocean-blue panels, soft white accents, and tiny star-like
+                  sparkles for a clean, modern sea-inspired look. Perfect for
+                  birthdays and coastal-themed celebrations.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,450</div>
+                    <div class="menu-card-size">8–10 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c4"
+                    data-name="Chocolate Fudge Layers"
+                    data-price="1450"
+                    data-image="/assets/fullMenu1.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="menu-card fade-in-up fade-in-delay-1">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu2.png"
+                    alt="Heartfelt Macapuno Cake"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">Heartfelt Macapuno Cake</div>
+                    <div class="menu-card-tag">This Week Favorite</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A white heart-shaped cake bordered with a stitched outline and
+                  topped with playful red accents. Clean piping and a
+                  handwritten-style center make it ideal for anniversaries,
+                  valentines, and romantic occasions.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,550</div>
+                    <div class="menu-card-size">8–10 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c5"
+                    data-name="Ube Macapuno Dream"
+                    data-price="1550"
+                    data-image="/assets/fullMenu2.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="menu-card fade-in-up fade-in-delay-2">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu3.png"
+                    alt="Pastel Garden Mocha Cake"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">Pastel Garden Mocha Cake</div>
+                    <div class="menu-card-tag">Flower Lovers</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A round mocha sponge decorated with soft pastel flowers, tiny
+                  leaves, and a hand-drawn “garden border” wrapping around the
+                  sides. Light, cheerful, and perfect for casual celebrations.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,500</div>
+                    <div class="menu-card-size">8–10 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c6"
+                    data-name="Mocha Crunch Celebration"
+                    data-price="1500"
+                    data-image="/assets/fullMenu3.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="menu-card fade-in-up">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu4.png"
+                    alt="Red Velvet Classic"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">Red Velvet Classic</div>
+                    <div class="menu-card-tag">Crowd favorite</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A striking minimalist cake wrapped with cascading red ribbons
+                  tied neatly around the sides. Finished with clean white piping
+                  and tiny red accents for an elegant yet dramatic centerpiece.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,750</div>
+                    <div class="menu-card-size">10–12 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c7"
+                    data-name="Red Velvet Classic"
+                    data-price="1600"
+                    data-image="/assets/fullMenu4.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="menu-card fade-in-up fade-in-delay-1">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu5.png"
+                    alt="Pastel Ribbon Cookies & Cream Cake"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">
+                      Pastel Ribbon Cookies & Cream Cake
+                    </div>
+                    <div class="menu-card-tag">Kids' pick</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A charming white cake adorned with pastel bow loops and soft
+                  piped borders. The top is decorated in a delicate, cloudy
+                  style, making it perfect for kids’ birthdays and sweet, gentle
+                  celebrations.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,450</div>
+                    <div class="menu-card-size">8–10 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c8"
+                    data-name="Cookies & Cream Sprinkle Cake"
+                    data-price="1450"
+                    data-image="/assets/fullMenu5.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="menu-card fade-in-up fade-in-delay-2">
+                <div class="menu-card-img-wrapper">
+                  <img
+                    src="/assets/fullMenu6.png"
+                    alt="Monochrome Berry Ribbon Cake"
+                    class="menu-card-img"
+                  />
+                </div>
+
+                <div class="menu-card-top">
+                  <div>
+                    <div class="menu-card-name">
+                      Monochrome Berry Ribbon Cake
+                    </div>
+                    <div class="menu-card-tag">Light & zesty</div>
+                  </div>
+                </div>
+                <p class="menu-card-desc">
+                  A chic black-and-white themed cake with ribbon loops around
+                  the sides and mini heart details scattered across the top.
+                  Clean, minimalist piping gives it a modern monochrome look.
+                </p>
+                <div class="menu-card-bottom">
+                  <div>
+                    <div class="menu-card-price">₱1,500</div>
+                    <div class="menu-card-size">8–10 servings</div>
+                  </div>
+                  <button
+                    class="btn btn-primary menu-add-btn"
+                    data-add-to-cart
+                    data-id="c9"
+                    data-name="Lemon Berry Cream Cake"
+                    data-price="1500"
+                    data-image="/assets/fullMenu6.png"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Customized Order CTA -->
+            <div class="custom-order-section">
+              <h3 class="custom-order-title">Customized Order?</h3>
+              <p class="custom-order-line">Want a cake baked exactly to your taste?</p>
+              <p class="custom-order-line secondary">
+                Get in touch with us and settle your desire!
+              </p>
+              <a href="/html/contact.html" class="btn btn-primary custom-order-btn">
+                Contact us
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Chamilo's Pastry</h3>
+         <p>
+          Custom, handcrafted cakes with a focus on clean designs, balanced sweetness, 
+          and memorable flavors.
+         </p>
+      <div class="footer-socials">
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/profile.php?id=100089264954559"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our Facebook page"
+        >
+          <img src="/assets/fb.png" alt="Facebook icon" />
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/chamilos_pastrys/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit our Instagram page"
+        >
+          <img src="/assets/insta.png" alt="Instagram icon" />
+        </a>
+
+        <!-- Email (Gmail) -->
+        <a href="mailto:Chamilopastry@gmail.com" aria-label="Email us">
+          <img src="/assets/email.png" alt="Email icon" />
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-column-title">Contact Us</div>
+      <ul class="footer-links">
+        <li>Diamond St., Brgy. Pembo, Makati City</li>
+        <li>+63 916 490 1535</li>
+        <li>chamilopastry@gmail.com</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-column-title">Quick links</div>
+      <ul class="footer-links">
+        <li><a href="/html/menu.html">Order a cake</a></li>
+        <li><a href="/html/contact.html">Terms and Services</a></li>
+        <li><a href="/html/login.html">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Chamilo's Pastry. All rights reserved.
+  </div>
+</footer>
+
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/chatbot.css" />
+    <script src="/js/chatbot.js"></script>
+  </body>
+</html>

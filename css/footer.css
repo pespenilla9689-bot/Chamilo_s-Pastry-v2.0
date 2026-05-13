@@ -1,0 +1,148 @@
+/* footer.css - global footer */
+
+/* Small images inside the circular social buttons (Facebook, Instagram, Email) */
+.footer-socials a img {
+  width: 20px;          /* keeps all icons visually the same size */
+  height: 20px;
+  object-fit: contain;  /* prevents stretching if logos aren't perfect squares */
+  display: block;       /* removes any extra inline spacing around the image */
+}
+
+/* Main footer background and vertical spacing from the page content above it */
+.site-footer {
+  background: linear-gradient(
+    to top,
+    rgba(178, 130, 255, 0.75),
+    rgba(255, 242, 169, 0.85)
+  );
+  margin-top: 4rem;     /* space between page content and footer */
+  padding-top: 3rem;    /* inner padding on top of the footer */
+}
+
+/* Layout for the three footer columns: brand, contact/visit, quick links */
+.footer-inner {
+  width: min(960px, 94%);                 /* keeps footer content nicely centered and not too wide */
+  margin-inline: auto;                    /* centers the whole footer block */
+
+  display: grid;                          /* lets us create three equal columns */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* exactly 3 even columns */
+  gap: 3rem;                              /* horizontal space between columns */
+  justify-items: center;                  /* centers each column within its grid cell */
+  align-items: flex-start;                /* makes all columns start at the same top height */
+}
+
+/* Generic styling for each column wrapper */
+.footer-inner > div {
+  max-width: 360px;       /* stops very long text from stretching too far */
+  text-align: center;
+}
+
+/* Brand column: logo text + short description */
+.footer-brand h3 {
+  font-family: var(--font-cursive);  /* keeps the script font for the brand name */
+  font-size: 1.7rem;
+  margin: 0 0 0.6rem;               /* no top margin so it lines up with other column titles */
+}
+
+.footer-brand p {
+  margin: 0;                        /* removes default top margin so spacing is consistent */
+  font-size: 0.9rem;                /* same size as other footer copy */
+  color: #6f5a72;                   /* softer purple for body text */
+}
+
+/* Column titles like “Contact Us” and “Quick links” */
+.footer-column-title {
+  font-weight: 600;
+  margin-bottom: 0.9rem;  /* space between title and the list below it */
+}
+
+/* Lists used for contact details and quick links */
+.footer-links {
+  list-style: none;       /* removes bullets */
+  margin: 0;
+  padding: 0;
+}
+
+/* Each line inside the lists (works for both links and plain text items) */
+.footer-links li {
+  font-size: 0.9rem;      /* makes contact details match the rest of the footer text size */
+  color: #6f5a72;
+}
+
+/* Links inside the lists such as “Order a cake”, “Client portal”, etc. */
+.footer-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #6f5a72;
+  transition: color var(--transition-base), transform var(--transition-base);
+}
+
+/* Slight movement and color change when hovering over footer links */
+.footer-links a:hover {
+  color: var(--deep-plum);
+  transform: translateX(2px);
+}
+
+/* Thin line and text for the bottom copyright row */
+.footer-bottom {
+  width: min(960px, 94%);
+  margin-inline: auto;
+  border-top: 1px solid rgba(75, 59, 71, 0.12);
+  margin-top: 2rem;
+  padding: 1rem 0 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #7a6675;
+}
+
+/* Container for the round social icon buttons under the brand text */
+.footer-socials {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+/* Individual round social buttons (the white circles) */
+.footer-socials a {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;      /* fully rounded for a circular look */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(230, 215, 255, 0.7);
+  color: #6f5a72;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base), background var(--transition-base);
+}
+
+/* Hover effect for social buttons: slight lift + pink background */
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  background: var(--accent-pink);
+  box-shadow: var(--shadow-soft);
+  color: var(--deep-plum);
+}
+
+/* Tablet view: same three columns, just slightly tighter spacing */
+@media (max-width: 900px) {
+  .footer-inner {
+    gap: 2rem;
+  }
+}
+
+/* Mobile view: stack the columns vertically but keep everything centered overall */
+@media (max-width: 640px) {
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr);  /* single column layout */
+    text-align: center;
+  }
+
+  .footer-inner > div {
+    max-width: 100%;                        /* let each section use full width on small screens */
+  }
+}
